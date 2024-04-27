@@ -13,7 +13,7 @@ function Room() {
     const fetchOrders = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://127.0.0.1:9406/get_orders");
+        const response = await fetch("http://15.206.173.176:9406/get_orders");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -34,7 +34,7 @@ function Room() {
 
     const handleStatusChange = async (order) => {
         order.status = !order.status;
-        const response = await fetch("http://127.0.0.1:9406/update_order", {
+        const response = await fetch("http://15.206.173.176:9406/update_order", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
