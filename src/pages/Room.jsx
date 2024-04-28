@@ -13,7 +13,7 @@ function Room() {
     const fetchOrders = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("https://15.206.173.176:9406/get_orders");
+        const response = await fetch("http://15.206.173.176:9406/get_orders");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -52,7 +52,7 @@ function Room() {
   return (
     <>
       <div className="container">
-        <h1>Fuddi da dhaba Orders Dashboard</h1>
+        <h1>Pupli's Kitchen Orders Dashboard</h1>
         <div className="orders-container">
           <h2>Orders</h2>
           <table>
